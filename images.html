@@ -1,0 +1,30 @@
+<html>
+<head> 
+</head>
+
+<body>
+<marquee>This is iframe you can show up adds/other html document</marquee>
+<div class="" style="max-width:500px">
+<img class="mySlides" src="E:\Workspace\music world\music\1.jpg" width="100px" height="100px"/>
+  <img class="mySlides" src="E:\Workspace\music world\music\4.png" width="100px" height="100px">
+  <img class="mySlides" src="E:\Workspace\music world\music\3.jpg" width="100px" height="100px">
+  <img class="mySlides" src="E:\Workspace\music world\music\4.png" width="100px" height="100px">
+</div>
+</body>
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+</html>
